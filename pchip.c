@@ -4,9 +4,10 @@
 
 #include "pchip.h"
 
-#define PCHIP_ABS(a) ((a) > 0 ? (a) : (-a))
+#define PCHIP_ABS(a) ((a) > 0 ? (a) : -(a))
+static double exteriorSlope(double d1, double d2, double h1, double h2);
 
-double exteriorSlope(double d1, double d2, double h1, double h2)
+inline double exteriorSlope(double d1, double d2, double h1, double h2)
 {
     double s;
     double signd1;
